@@ -63,15 +63,19 @@ st.write("⑰大学選択において見た目の清潔さが大事だと思う�
 pick_17 = st.radio('pick_17',['当てはまる','どちらかと言えば当てはまる','どちらでもない','どちらかと言えば当てはまらない','当てはまらない'], label_visibility="hidden")
 
 answer_dict = {'当てはまらない': 0, 'どちらかと言えば当てはまらない': 0.25, 'どちらでもない': 0.5, 'どちらかと言えば当てはまる': 0.75, '当てはまる': 1}
+print(1)
 
 answer_list = [answer_dict.get(pick_1), answer_dict.get(pick_2), answer_dict.get(pick_3), answer_dict.get(pick_4), answer_dict.get(pick_5), answer_dict.get(pick_6), answer_dict.get(pick_7), answer_dict.get(pick_8), answer_dict.get(pick_9), answer_dict.get(pick_10), answer_dict.get(pick_11), answer_dict.get(pick_12), answer_dict.get(pick_13), answer_dict.get(pick_14), answer_dict.get(pick_15), answer_dict.get(pick_16), answer_dict.get(pick_17)]
+print(2)
 
 similarities = {}
 for university, features in universities.items():
     similarity = cosine_similarity([answer_list], [features])[0][0]
     similarities[university] = similarity
+print(3)
 
 if st.button('Click me') == True:
     sorted_universities = sorted(similarities.items(), key=lambda x: x[1], reverse=True)
     for university, similarity in sorted_universities:
         print(f"{university}: {similarity}")
+print(4)
