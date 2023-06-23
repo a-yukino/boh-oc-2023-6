@@ -72,6 +72,6 @@ for university, features in universities.items():
     similarities[university] = similarity
 
 if st.button('Click me') == True:
-  sorted_universities = sorted(similarities.items(), key=lambda x: x[1], reverse=True)
-  for university, similarity in sorted_universities:
-      print(f"{university}: {similarity}")
+    sorted_universities = sorted(similarities.items(), key=lambda x: x[1], reverse=True)
+    for university, similarity in sorted_universities:
+        print(f"{university}: {similarity}")
