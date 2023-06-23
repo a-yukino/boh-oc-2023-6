@@ -77,5 +77,5 @@ print(3)
 if st.button('Click me') == True:
     sorted_universities = sorted(similarities.items(), key=lambda x: x[1], reverse=True)
     for university, similarity in sorted_universities:
-        print(f"{university}: {similarity}")
+        st.write(f"{university}: {similarity}")
 print(4)
